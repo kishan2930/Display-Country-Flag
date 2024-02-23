@@ -8,7 +8,7 @@ export default function App() {
     fetch("https://restcountries.com/v3.1/all")
       .then((response) => response.json())
       .then((data) => setCountryData(data))
-      .catch((err) => console.error(err));
+      .catch((error) => console.error("Fetching Data Error : ",error));
   }, []);
 
   const container = {
